@@ -25,9 +25,14 @@ const Videos = () => {
         if (!res.ok) throw new Error("Failed to fetch videos");
         const data = await res.json();
         setVideos(data);
-      } catch (err: any) {
-        console.error("Error fetching videos:", err.message);
-        setError(err.message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          console.error("Error fetching videos:", err.message);
+          setError(err.message);
+        } else {
+          console.error("Unknown error:", err);
+          setError("An unknown error occurred");
+        }
       } finally {
         setLoading(false);
       }
@@ -42,7 +47,7 @@ const Videos = () => {
   const slides = videos.map((video) => ({
     title: video.title,
     button: "Watch Video",
-    src: video.thumbnail,
+    src: video.thumbnail, // If using an img tag somewhere else, replace with <Image />
     link: video.link,
   }));
 
