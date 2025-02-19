@@ -13,8 +13,9 @@ import {
 
 export default  function Post() {
   return (
+    <div id='post'>
   
-    <BentoGrid className="max-w-full mx-auto">
+    <BentoGrid className="max-w-full mx-auto ">
       {projects.map((project, i) => (
         <BentoGridItem
           key={i}
@@ -26,6 +27,7 @@ export default  function Post() {
         />
       ))}
     </BentoGrid>
+    </div>
    
   );
 }

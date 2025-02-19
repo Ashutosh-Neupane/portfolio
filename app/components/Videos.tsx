@@ -52,7 +52,7 @@ const Videos = () => {
   }));
 
   return (
-    <div className="w-full mx-auto my-32 p-8 overflow-hidden" id="Videos">
+    <div className="w-full mx-auto my-32 p-8 overflow-hidden" id="videos">
       <h1>
         <ColourfulText text="Latest YouTube Videos" />
       </h1>

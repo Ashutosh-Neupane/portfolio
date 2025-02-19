@@ -23,7 +23,7 @@ const fakeProjects = Array.from({ length: 5 }, (_, index) => ({
 
 const RecentProjects = () => {
   return (
-    <div className="py-20 pl-5" id="project">
+    <div className="py-20 pl-5" id="projects">
       <h1 className="heading">
       <ColourfulText text="    A small selection of Recent projects" />
       </h1>
