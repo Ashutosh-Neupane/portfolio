@@ -1,7 +1,17 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+// next.config.js
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.ytimg.com", // Allow all subdomains of ytimg.com
+      },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com", // Allow images from Unsplash
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
