@@ -58,15 +58,13 @@ const Videos = () => {
       </h1>
 
       <Carousel slides={slides} />
-      <div className="flex justify-center p-9">
-        <Link href="https://www.youtube.com/@NirajanKhatiwada/playlists" target="_blank" legacyBehavior>
-          <a>
-            <Buttons
-              text="View More"
-              className="w-[15rem] text-3xl h-11rem text-justify cursor-pointer"
-              ariaLabel="View More"
-            />
-          </a>
+      <div className="flex justify-center p-9 z-50">
+        <Link href="https://www.youtube.com/@NirajanKhatiwada/playlists" target="_blank">
+          <Buttons
+            text="View More"
+            className="w-[15rem] text-3xl h-11rem text-justify cursor-pointer"
+            ariaLabel="View More"
+          />
         </Link>
       </div>
     </div>

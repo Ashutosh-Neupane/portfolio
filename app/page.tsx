@@ -10,7 +10,7 @@ import Post from "./components/Post";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-black flex flex-col items-center w-full relative">
+    <div className="min-h-screen bg-transparent flex flex-col items-center w-full relative z-[3]">
       {/* Navigation */}
       <FloatingNav
         navItems={[
@@ -47,8 +47,8 @@ export default function Home() {
       <Footer />
 
       {/* Background Effects */}
-      <ShootingStars className="absolute top-0 left-0 w-full h-full z-[0]" />
-      <StarsBackground className="absolute top-0 left-0 w-full h-full z-[1]" />
+      <ShootingStars className="absolute top-0 left-0 w-full h-full z-[-1]" />
+      <StarsBackground className="absolute top-0 left-0 w-full h-full z-[-2]" />
     </div>
   );
 }
