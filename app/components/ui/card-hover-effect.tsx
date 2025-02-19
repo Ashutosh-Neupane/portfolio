@@ -8,7 +8,7 @@ export const HoverEffect = ({
 }: {
   items: {
     name: string;
-    role: string;
+    role: string | string[]; // Allow role to be a string or array
     logo: string; // This could be an image URL
   }[];
   className?: string;
@@ -48,7 +48,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle logo={item.logo}>{item.name}</CardTitle>
-            <CardDescription>{item.role}</CardDescription>
+            <CardDescription>{Array.isArray(item.role) ? item.role.join(", ") : item.role}</CardDescription>
           </Card>
         </div>
       ))}
