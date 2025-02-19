@@ -113,10 +113,10 @@ const Slide = ({ slide, index, current }: SlideProps) => {
             current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
         >
-          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative">
+          <h2 className="text-lg md:text-2xl lg:text-4xl font-semibold relative text-[#f9fe8f]">
             {title}
           </h2>
-          <div className="flex justify-center">
+          <div className="flex justify-center ">
             <a
               href={link}
               target="_blank"

@@ -1,4 +1,3 @@
-import { Spotlight } from "./ui/spotlight";
 import { ColourfulText } from "./ui/colorful-text";
 import Buttons from "./ui/buttons";
 import Image from "next/image";
@@ -28,26 +27,10 @@ const skills = [
 
 const Hero = () => {
   return (
-    <div className="flex flex-col justify-center items-center w-full text-center relative overflow-visible p-4 overflow-x-hidden min-h-screen">
-      {/* Spotlight Elements */}
-      <div className="absolute inset-0">
-        <Spotlight
-          className="-top-40 -left-10 md:-left-32 md:-top-20 h-screen"
-          fill="white"
-        />
-        <Spotlight
-          className="-top-10 left-full md:-left-32 md:-top-20 h-[80vh] w-[50vw]"
-          fill="purple"
-        />
-        <Spotlight
-          className="top-28 left-80 md:-left-32 md:-top-20 h-[80vh] w-[50vw]"
-          fill="blue"
-        />
-      </div>
-
+    <div className="flex flex-col justify-center  text-gray-300items-center w-full text-center relative overflow-visible p-4 sm:m-[3rem]  overflow-x-hidden min-h-screen">
       {/* Background Overlay */}
-      <div className="h-full w-full  dark:bg-grid-white/[0.05] bg-grid-black/[0.12] absolute top-0 left-0 flex items-center justify-center">
-        <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-black bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+      <div className="h-full w-full  bg-grid-black/[0.05] absolute top-0 left-0 flex items-center justify-center">
+        <div className="absolute pointer-events-none inset-0 flex items-center justify-center  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
       {/* Main Content */}
@@ -92,10 +75,10 @@ const Hero = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row justify-start items-start w-full bg-white dark:bg-gray-800 p-4 m-2 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-purple-50 hover:shadow-xl transform hover:translate-y-2 animate-fadeIn relative overflow-hidden"
+              className="flex flex-col md:flex-row justify-start items-start w-full bg-white dark:bg-[#2222] p-4 m-2 rounded-2xl shadow-lg hover:scale-105 transition-all duration-300 ease-in-out hover:bg-purple-50 hover:shadow-xl transform hover:translate-y-2 animate-fadeIn relative overflow-hidden"
             >
               {/* Image on the left */}
-              <div className="flex-shrink-0  bg-white  rounded-l mr-4">
+              <div className="flex-shrink-0   rounded-l mr-4">
                 <Image
                   src={skill.img}
                   alt={`${skill.title} icon`}

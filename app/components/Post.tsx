@@ -10,10 +10,14 @@ import {
   IconCloud,
   IconSettings,
 } from "@tabler/icons-react";
+import { ColourfulText } from "./ui/colorful-text";
 
 export default  function Post() {
   return (
     <div id='post'>
+      <h1 className="uppercase tracking-widest text-2xl md:text-4xl lg:text-5xl m-2">
+              <ColourfulText text="A small selection of Recent projects" />
+            </h1>
   
     <BentoGrid className="max-w-full mx-auto ">
       {projects.map((project, i) => (

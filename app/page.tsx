@@ -1,5 +1,4 @@
-import { ShootingStars } from "./components/ui/shooting-stars";
-import { StarsBackground } from "./components/ui/stars-background";
+
 import { FloatingNav } from "./components/ui/Navbar";
 import Videos from "./components/Videos";
 import Organization from "./components/Organization";
@@ -10,7 +9,7 @@ import Post from "./components/Post";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-transparent flex flex-col items-center w-full relative z-[3]">
+    <div className="min-h-screen bg-[#222222] text-gray-300 flex flex-col items-center w-full relative z-[3]">
       {/* Navigation */}
       <FloatingNav
         navItems={[
@@ -21,34 +20,12 @@ export default function Home() {
           { name: "Contact", link: "#contact" },
         ]}
       />
-
-      {/* Hero Section */}
-
       <Hero />
-
-      {/* Organization Section */}
-
       <Organization />
-
-      {/* Videos Section */}
-
       <Videos />
-
-      {/* Projects Section */}
-
       <Projects />
-
-      {/* Post Section */}
-
       <Post />
-
-      {/* Footer Section */}
-
       <Footer />
-
-      {/* Background Effects */}
-      <ShootingStars className="absolute top-0 left-0 w-full h-full z-[0]" />
-      <StarsBackground className="absolute top-0 left-0 w-full h-full z-[-2]" />
     </div>
   );
 }

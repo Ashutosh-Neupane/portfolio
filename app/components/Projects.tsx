@@ -1,6 +1,6 @@
 "use client";
 
-import { ColourfulText } from "./ui/colorful-text"; // adjust the import path
+import { ColourfulText } from "./ui/colorful-text"; // Adjust the import path
 import { PinContainer } from "./ui/PinContainer";
 
 const randomWebsites = [
@@ -23,9 +23,9 @@ const fakeProjects = Array.from({ length: 5 }, (_, index) => ({
 
 const RecentProjects = () => {
   return (
-    <div className="py-20 pl-5" id="projects">
-      <h1 className="heading">
-      <ColourfulText text="    A small selection of Recent projects" />
+    <div className="py-20 pl-5 bg-[#222222] text-gray-300" id="projects">
+      <h1 className="uppercase tracking-widest text-2xl md:text-4xl lg:text-5xl m-2">
+        <ColourfulText text="A small selection of Recent projects" />
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {fakeProjects.map((item) => (
@@ -34,31 +34,24 @@ const RecentProjects = () => {
             key={item.id}
           >
             <PinContainer title={item.title} href={item.link}>
-              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
+              <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10 bg-[#222222]">
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
-                  style={{ backgroundColor: "#13162D" }}
+                  className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#222222]"
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <img src="/bg.png" alt="Background" className="w-full h-full object-cover opacity-50" />
                 </div>
                 <img
                   src={item.img}
-                  alt="cover"
-                  className="z-10 absolute bottom-0"
+                  alt="Project Cover"
+                  className="z-10 absolute bottom-0 w-full h-auto"
                 />
               </div>
 
-              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
+              <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1 text-[#f9fe8f]">
                 {item.title}
               </h1>
 
-              <p
-                className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2"
-                style={{
-                  color: "#BEC1DD",
-                  margin: "1vh 0",
-                }}
-              >
+              <p className="lg:text-xl lg:font-normal font-light text-sm line-clamp-2 text-gray-300 mt-2">
                 {item.des}
               </p>
 
@@ -67,9 +60,9 @@ const RecentProjects = () => {
                   href={item.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex lg:text-xl md:text-xs text-sm underline cursor-pointer"
+                  className="flex lg:text-xl md:text-xs text-sm underline cursor-pointer text-[#f9fe8f]"
                 >
-                  <ColourfulText text="Check Live Site" />
+                  Check Live Site
                 </a>
               </div>
             </PinContainer>

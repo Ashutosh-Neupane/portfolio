@@ -1,6 +1,4 @@
 import { cn } from "@/lib/utils";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
 
 export const HoverEffect = ({
   items,
@@ -8,13 +6,11 @@ export const HoverEffect = ({
 }: {
   items: {
     name: string;
-    role: string | string[]; // Allow role to be a string or array
-    logo: string; // This could be an image URL
+    role: string | string[];
+    logo: string;
   }[];
   className?: string;
 }) => {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-
   return (
     <div
       className={cn(
@@ -22,33 +18,17 @@ export const HoverEffect = ({
         className
       )}
     >
-      {items.map((item, idx) => (
-        <div
-          key={item?.logo}
-          className="relative group block p-2 h-full w-full"
-          onMouseEnter={() => setHoveredIndex(idx)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence>
-            {hoveredIndex === idx && (
-              <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 dark:bg-slate-800/[0.8] block rounded-3xl"
-                layoutId="hoverBackground"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: 1,
-                  transition: { duration: 0.15 },
-                }}
-                exit={{
-                  opacity: 0,
-                  transition: { duration: 0.15, delay: 0.2 },
-                }}
-              />
-            )}
-          </AnimatePresence>
+      {items.map((item) => (
+        <div key={item?.logo} className="block p-2 h-full w-full">
           <Card>
-            <CardTitle logo={item.logo}>{item.name}</CardTitle>
-            <CardDescription>{Array.isArray(item.role) ? item.role.join(", ") : item.role}</CardDescription>
+            <div className="flex flex-col items-start">
+              <CardLogo logo={item.logo} />
+              <CardTitleAndRole title={item.name} role={item.role} />
+            </div>
+            {/* Only show description if role is an array */}
+            {Array.isArray(item.role) && (
+              <CardDescription>{item.role.join(", ")}</CardDescription>
+            )}
           </Card>
         </div>
       ))}
@@ -66,7 +46,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-black border border-transparent dark:border-white/[0.2] group-hover:border-slate-700 relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-transparent relative z-20 flex flex-col",
         className
       )}
     >
@@ -77,24 +57,44 @@ export const Card = ({
   );
 };
 
-export const CardTitle = ({
-  className,
-  children,
-  logo,
-}: {
-  className?: string;
-  children: React.ReactNode;
-  logo: string; // Add logo as a prop
-}) => {
+export const CardLogo = ({ logo }: { logo: string }) => {
   return (
-    <h4 className={cn("flex items-center text-zinc-100 font-bold tracking-wide mt-4", className)}>
+    <div className="flex justify-start mb-4">
       <img
         src={logo} // Assuming logo is an image URL
         alt="Logo"
-        className="mr-2 h-12 w-12" // Adjust the size of the logo
+        className="h-24 w-24"
       />
-      {children}
-    </h4>
+    </div>
+  );
+};
+
+export const CardTitleAndRole = ({
+  title,
+  role,
+}: {
+  title: string;
+  role: string | string[];
+}) => {
+  return (
+    <div className="flex flex-col relative pl-2">
+      {/* Left border line with gray-300 and 0.2rem thickness */}
+      <div className="absolute top-[-0.2rem] left-0 h-[calc(100%+0.4rem)] w-[0.2rem] bg-gray-300" />
+
+      <h4 className="text-[#f9fe8f] font-bold tracking-wide text-left z-10">
+        {title}
+      </h4>
+
+      {Array.isArray(role) ? (
+        <p className="mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm text-left z-10">
+          {role.join(", ")}
+        </p>
+      ) : (
+        <p className="mt-2 text-zinc-400 tracking-wide leading-relaxed text-sm text-left z-10">
+          {role}
+        </p>
+      )}
+    </div>
   );
 };
 
@@ -108,7 +108,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-zinc-400 tracking-wide leading-relaxed text-sm text-left",
         className
       )}
     >

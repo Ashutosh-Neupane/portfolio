@@ -27,10 +27,10 @@ const socialMedia = [
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-12 pl-12 pr-12 pb-6 relative " id="contact">
+    <footer className="w-full pt-12 pl-12 pr-12 pb-6 relative  z-10" id="contact">
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw] text-center">
-          Ready to take <span className="text-purple">your</span> digital
+          Ready to take <span className="text-[#f9fe8f]">your</span> digital
           presence to the next level?
         </h1>
         <p className="text-white-200 md:mt-6 my-3 text-center">

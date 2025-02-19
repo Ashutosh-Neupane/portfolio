@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
@@ -19,14 +19,19 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({ navItems, className })
   const { scrollYProgress } = useScroll();
 
   // State to control visibility of the nav
-  const [visible, setVisible] = useState(true);
+  const [visible, setVisible] = useState(false);
+
+  // Hide navbar on initial load
+  useEffect(() => {
+    setVisible(false); // Hide navbar initially
+  }, []);
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
       const direction = current - scrollYProgress.getPrevious()!;
 
       if (scrollYProgress.get() < 0.05) {
-        setVisible(true); // Show when close to the top
+        setVisible(false); // Hide navbar when at the top
       } else {
         setVisible(direction < 0); // Show if scrolling up, hide if scrolling down
       }
@@ -36,7 +41,7 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({ navItems, className })
   return (
     <AnimatePresence mode="wait">
       <motion.div
-        initial={{ opacity: 1, y: -100 }}
+        initial={{ opacity: 0, y: -100 }} // Initially hidden
         animate={{
           y: visible ? 0 : -100,
           opacity: visible ? 1 : 0,
@@ -48,7 +53,7 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({ navItems, className })
         )}
         style={{
           backdropFilter: "blur(16px) saturate(180%)",
-          backgroundColor: "rgba(17, 25, 40, 0.75)",
+          backgroundColor: "#222222", // Set background color to #222222
           borderRadius: "12px",
           border: "1px solid rgba(255, 255, 255, 0.125)",
         }}
@@ -58,7 +63,10 @@ export const FloatingNav: React.FC<FloatingNavProps> = ({ navItems, className })
             key={`link-${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative items-center flex space-x-1",
+              "text-[#f9fe8f]", // Set the text color to #f9fe8f
+              "dark:hover:text-[#f9fe8f]", // For dark mode: Ensure hover effect has the same color
+              "hover:text-[#f9fe8f]" // Hover effect
             )}
           >
             <span className="text-sm !cursor-pointer">{navItem.name}</span>

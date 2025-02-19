@@ -53,17 +53,19 @@ const Videos = () => {
 
   return (
     <div className="w-full mx-auto my-32 p-8 overflow-hidden" id="videos">
-      <h1>
+      <h1 className="uppercase tracking-widest text-2xl md:text-4xl lg:text-5xl m-2">
         <ColourfulText text="Latest YouTube Videos" />
       </h1>
 
       <Carousel slides={slides} />
       <div className="flex justify-center p-9 z-50">
-        <Link href="https://www.youtube.com/@NirajanKhatiwada/playlists" target="_blank">
+        <Link
+          href="https://www.youtube.com/@NirajanKhatiwada/playlists"
+          target="_blank"
+        >
           <Buttons
             text="View More"
             className="w-[15rem] text-3xl h-11rem text-justify cursor-pointer"
-            ariaLabel="View More"
           />
         </Link>
       </div>
