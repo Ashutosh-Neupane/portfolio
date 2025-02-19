@@ -47,8 +47,8 @@ export default function Home() {
       <Footer />
 
       {/* Background Effects */}
-      <ShootingStars className="absolute top-0 left-0 w-full h-full z-[-3]" />
-      <StarsBackground className="absolute top-0 left-0 w-full h-full z-[-2]" />
+      <ShootingStars className="absolute top-0 left-0 w-full h-full z-[0]" />
+      <StarsBackground className="absolute top-0 left-0 w-full h-full z-[1]" />
     </div>
   );
 }
