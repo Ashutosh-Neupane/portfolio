@@ -3,6 +3,7 @@
 import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useEffect } from "react";
 import Buttons from "./buttons";
+import Image from "next/image";  // Import next/image for optimized images
 
 interface SlideData {
   title: string;
@@ -21,7 +22,7 @@ const Slide = ({ slide, index, current }: SlideProps) => {
   const slideRef = useRef<HTMLLIElement>(null);
   const xRef = useRef(0);
   const yRef = useRef(0);
-  const frameRef = useRef<number>();
+  const frameRef = useRef<number | null>(null);  // Fixed: Added default value
 
   useEffect(() => {
     const animate = () => {
@@ -43,7 +44,7 @@ const Slide = ({ slide, index, current }: SlideProps) => {
         cancelAnimationFrame(frameRef.current);
       }
     };
-  }, []);
+  }, []); // Empty dependency array is correct here, no need to change
 
   const handleMouseMove = (event: React.MouseEvent) => {
     const el = slideRef.current;
@@ -91,14 +92,16 @@ const Slide = ({ slide, index, current }: SlideProps) => {
                 : "none",
           }}
         >
-          <img
+          <Image
             className="absolute inset-0 w-[120%] h-[120%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
             style={{ opacity: current === index ? 1 : 0.5 }}
             alt={title}
-            src={src}
+            src={src} // Changed to use `next/image`
             onLoad={imageLoaded}
             loading="eager"
             decoding="sync"
+            width={500}  // Set an appropriate width for the image
+            height={300} // Set an appropriate height for the image
           />
           {current === index && (
             <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
