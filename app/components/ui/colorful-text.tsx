@@ -27,7 +27,7 @@ export function ColourfulText({ text }: { text: string }) {
     }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, []); // No need for 'col' as a dependency
 
   return (
     <span className="inline-block">

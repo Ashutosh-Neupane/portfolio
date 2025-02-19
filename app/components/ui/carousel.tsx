@@ -15,10 +15,9 @@ interface SlideProps {
   slide: SlideData;
   index: number;
   current: number;
-  handleSlideClick: (index: number) => void;
 }
 
-const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
+const Slide = ({ slide, index, current }: SlideProps) => {
   const slideRef = useRef<HTMLLIElement>(null);
   const xRef = useRef(0);
   const yRef = useRef(0);
@@ -70,7 +69,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     <div className="[perspective:1200px] [transform-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10"
         onClick={() => window.open(link, "_blank")}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -121,7 +120,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
               rel="noopener noreferrer"
               className="mt-6 px-4 py-2 w-fit mx-auto sm:text-sm text-black  h-12 border border-transparent text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200"
             >
-            <Buttons text={button} className="w-[10rem] bold text-xl" />
+              <Buttons text={button} className="w-[10rem] bold text-xl" />
             </a>
           </div>
         </article>
@@ -187,13 +186,7 @@ export default function Carousel({ slides }: CarouselProps) {
         }}
       >
         {slides.map((slide, index) => (
-          <Slide
-            key={index}
-            slide={slide}
-            index={index}
-            current={current}
-            handleSlideClick={() => {}}
-          />
+          <Slide key={index} slide={slide} index={index} current={current} />
         ))}
       </ul>
 
