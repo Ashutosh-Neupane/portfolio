@@ -8,7 +8,7 @@ const Home = () => {
     <div className="flex flex-col items-center justify-center gap-4 h-[100vh] px-4 text-center">
       <div className="flex flex-col items-center">
         <img
-          src="./public/photo.jpg"
+          src="photo.jpg"
           alt="profile"
           className="object-cover w-48 h-48 rounded-full"
         />
