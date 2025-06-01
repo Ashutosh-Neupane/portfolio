@@ -1,0 +1,25 @@
+@import "tailwindcss";
+.skills{
+  @apply  border rounded-3xl p-[1rem] h-[15rem] w-[30rem] flex flex-col gap-[1rem] align-middle justify-center transition-transform duration-300 hover:scale-105 hover:shadow-lg
+}
+.projects{
+
+  @apply object-cover rounded-3xl h-[50vh] w-full max-w-[30rem] m-auto p-3
+
+}
+.btn3 {
+  @apply px-6 py-2 font-bold text-black cursor-pointer bg-white rounded-3xl hover:bg-gray-300 transition-colors;
+}
+
+.btn2 {
+  @apply px-6 py-2 font-bold border border-black rounded-3xl text-black hover:bg-gray-100 cursor-pointer transition-colors;
+}
+
+.btn1 {
+  @apply px-6 py-2 font-bold text-white cursor-pointer bg-black rounded-3xl hover:bg-gray-700 transition-colors;
+}
+
+.btn4 {
+  @apply px-6 py-2 font-bold border border-white rounded-3xl text-white cursor-pointer hover:bg-gray-700 transition-colors;
+}
+
