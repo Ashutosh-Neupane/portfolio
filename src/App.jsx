@@ -15,38 +15,49 @@ const App = () => {
   const serviceRef = useRef(null);
   const { theme, setTheme } = useContext(ThemeContext);
 
-
   return (
-    <div className={`scroll-smooth ${theme ? "bg-black text-white" : "bg-white text-black"}`}>
+    <div
+      className={`scroll-smooth overflow-hidden ${
+        theme ? "bg-black text-white" : "bg-white text-black"
+      }`}
+    >
       {/* Header */}
       <header
-        className={`flex fixed w-full items-center justify-center px-10 py-6 shadow-md z-50 font-poppins ${
+        className={`flex fixed w-full items-center justify-between md lg:px-10 py-6 shadow-md z-50 font-poppins ${
           theme ? "bg-black text-white" : "bg-white text-black"
         }`}
       >
+        {/* Left side: Title */}
         <h1 className="text-3xl font-bold">
           Ashutosh<span className="text-purple-600">.</span>
         </h1>
+
         <Navbar
           homeRef={homeRef}
           aboutRef={aboutRef}
           contactRef={contactRef}
           myWorkRef={myWorkRef}
-          serviceRef={serviceRef}
+          serviceRef={serviceRef} // Ensure serviceRef is passed if needed by Navbar
         />
-        {theme ? (
-          <FaSun
-            onClick={() => setTheme(false)}
-            className="absolute right-10 cursor-pointer text-2xl"
-            title="Switch to light mode"
-          />
-        ) : (
-          <FaMoon
-            onClick={() => setTheme(true)}
-            className="absolute right-10 cursor-pointer text-2xl"
-            title="Switch to dark mode"
-          />
-        )}
+
+        {/* Right side: Theme Toggle - Hidden on small screens (md:block makes it visible on medium and up) */}
+        <div className="hidden md:block">
+          {" "}
+          {/* This div hides the toggle on mobile */}
+          {theme ? (
+            <FaSun
+              onClick={() => setTheme(false)}
+              className="cursor-pointer text-2xl"
+              title="Switch to light mode"
+            />
+          ) : (
+            <FaMoon
+              onClick={() => setTheme(true)}
+              className="cursor-pointer text-2xl"
+              title="Switch to dark mode"
+            />
+          )}
+        </div>
       </header>
 
       {/* Spacer */}

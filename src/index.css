@@ -1,4 +1,7 @@
 @import "tailwindcss";
+.root,body{
+  @apply flex flex-col min-h-screen w-[100%]
+}
 .skills{
   @apply  border rounded-3xl p-[1rem] h-[15rem] w-[30rem] flex flex-col gap-[1rem] align-middle justify-center transition-transform duration-300 hover:scale-105 hover:shadow-lg
 }
