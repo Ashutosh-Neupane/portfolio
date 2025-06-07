@@ -10,7 +10,7 @@ const Contact = () => {
   const buttonClass = theme ? "btn3" : "btn1";
 
   return (
-    <section className="min-h-screen py-12 px-6">
+    <section className="min-h-screen py-12 px-6" id="contact-section">
       <div className="max-w-2xl mx-auto text-center mb-5 flex gap-[1rem] flex-col">
         <h3 className="text-3xl font-bold mb-2">Connect with me</h3>
         <p className="text-lg font-medium">Get in Touch</p>

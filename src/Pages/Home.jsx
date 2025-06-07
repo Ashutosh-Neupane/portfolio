@@ -20,17 +20,22 @@ const Home = () => {
       </h6>
 
       <p className="max-w-xl ">
-        I am a full stack developer from <strong>Gongabu, Kathmandu</strong>. 
+        I am a full stack developer from <strong>Gongabu, Kathmandu</strong>.
         Currently studying BSc.CSIT.
       </p>
 
       <div className="flex gap-4 mt-4">
-        <button className={theme ? "btn3" : "btn1"}>
+        <button
+          className={theme ? "btn3" : "btn1"}
+          onClick={() =>
+            document
+              .getElementById("contact-section")
+              ?.scrollIntoView({ behavior: "smooth" })
+          }
+        >
           Contact Me
         </button>
-        <button className={theme ? "btn4" : "btn2"}>
-          My Resume
-        </button>
+        <button className={theme ? "btn4" : "btn2"} onClick={()=>{window.open("https://drive.google.com/file/d/1KkcfJq6jc8sGCcw71Xw0HfZGbx91b7iv/view?usp=sharing","_blank")}}>My Resume</button>
       </div>
     </div>
   );
