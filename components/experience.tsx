@@ -296,7 +296,7 @@ export function Experience() {
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <span className="text-muted-foreground">
-                      Sep 2025: Completed internship
+                      Sep 2025: Started junior postion
                     </span>
                   </div>
                 </div>
