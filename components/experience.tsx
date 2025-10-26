@@ -1,10 +1,20 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Calendar, Building, CheckCircle, Rocket, Users, Code } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  Calendar,
+  Building,
+  CheckCircle,
+  Rocket,
+  Users,
+  Code,
+} from "lucide-react";
 
 export function Experience() {
   return (
-    <section id="experience" className="py-20 bg-muted/30 relative overflow-hidden">
+    <section
+      id="experience"
+      className="py-20 bg-muted/30 relative overflow-hidden"
+    >
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 right-20 w-64 h-64 bg-gradient-to-br from-primary to-secondary rounded-full blur-3xl animate-float"></div>
         <div className="absolute bottom-20 left-20 w-48 h-48 bg-gradient-to-br from-accent to-primary rounded-full blur-2xl animate-float-delayed"></div>
@@ -19,7 +29,8 @@ export function Experience() {
             <div className="h-1 w-40 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full animate-expand"></div>
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty mt-6 animate-fade-in-delayed">
-            My journey in professional web development and collaborative teamwork
+            My journey in professional web development and collaborative
+            teamwork
           </p>
         </div>
 
@@ -34,29 +45,35 @@ export function Experience() {
                       <Building className="h-8 w-8 text-primary" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl mb-2">Web Developer Intern -Junior </CardTitle>
+                      <CardTitle className="text-2xl mb-2">
+                        Web Developer Intern -Junior{" "}
+                      </CardTitle>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Building className="h-4 w-4" />
-                        <span className="font-semibold text-primary">Dots and Dashes Technology Limited</span>
+                        <span className="font-semibold text-primary">
+                          Dots and Dashes Technology Limited
+                        </span>
                       </div>
                     </div>
                   </div>
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
                       <Calendar className="h-4 w-4" />
-                      <span>June 2024 – present</span>
+                      <span>June 2025 – present</span>
                     </div>
-                    <Badge variant="secondary" className="w-fit bg-primary/10 text-primary hover:bg-primary/20">
+                    {/* <Badge variant="secondary" className="w-fit bg-primary/10 text-primary hover:bg-primary/20">
                       3 Months
-                    </Badge>
+                    </Badge> */}
                   </div>
                 </div>
               </CardHeader>
 
               <CardContent className="space-y-8">
                 <p className="text-muted-foreground text-pretty leading-relaxed text-lg">
-                  Gained valuable hands-on experience in professional web development, working collaboratively in a team
-                  environment to deliver high-quality web applications using modern technologies.
+                  Gained valuable hands-on experience in professional web
+                  development, working collaboratively in a team environment to
+                  deliver high-quality web applications using modern
+                  technologies.
                 </p>
 
                 <div className="space-y-6">
@@ -70,9 +87,12 @@ export function Experience() {
                         <Code className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <h5 className="font-semibold text-sm mb-1">Frontend Development</h5>
+                        <h5 className="font-semibold text-sm mb-1">
+                          Frontend Development
+                        </h5>
                         <p className="text-xs text-muted-foreground">
-                          Built responsive components using React.js and Chakra UI
+                          Built responsive components using React.js and Chakra
+                          UI
                         </p>
                       </div>
                     </div>
@@ -81,7 +101,9 @@ export function Experience() {
                         <Users className="h-4 w-4 text-secondary" />
                       </div>
                       <div>
-                        <h5 className="font-semibold text-sm mb-1">Team Collaboration</h5>
+                        <h5 className="font-semibold text-sm mb-1">
+                          Team Collaboration
+                        </h5>
                         <p className="text-xs text-muted-foreground">
                           Worked effectively in agile development environment
                         </p>
@@ -92,8 +114,12 @@ export function Experience() {
                         <Building className="h-4 w-4 text-accent" />
                       </div>
                       <div>
-                        <h5 className="font-semibold text-sm mb-1">Project Workflows</h5>
-                        <p className="text-xs text-muted-foreground">Mastered Git collaboration and version control</p>
+                        <h5 className="font-semibold text-sm mb-1">
+                          Project Workflows
+                        </h5>
+                        <p className="text-xs text-muted-foreground">
+                          Mastered Git collaboration and version control
+                        </p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3 p-4 bg-muted/30 rounded-xl hover:bg-muted/50 transition-colors">
@@ -101,7 +127,9 @@ export function Experience() {
                         <Rocket className="h-4 w-4 text-primary" />
                       </div>
                       <div>
-                        <h5 className="font-semibold text-sm mb-1">Professional Standards</h5>
+                        <h5 className="font-semibold text-sm mb-1">
+                          Professional Standards
+                        </h5>
                         <p className="text-xs text-muted-foreground">
                           Learned industry best practices and coding standards
                         </p>
@@ -117,12 +145,34 @@ export function Experience() {
                   </h4>
                   <div className="flex flex-wrap gap-3">
                     {[
-                      { name: "React.js", color: "bg-blue-500/10 text-blue-700 border-blue-200" },
-                      { name: "Chakra UI", color: "bg-teal-500/10 text-teal-700 border-teal-200" },
-                      { name: "JavaScript", color: "bg-yellow-500/10 text-yellow-700 border-yellow-200" },
-                      { name: "Git", color: "bg-orange-500/10 text-orange-700 border-orange-200" },
-                      { name: "Team Collaboration", color: "bg-purple-500/10 text-purple-700 border-purple-200" },
-                      { name: "Agile", color: "bg-green-500/10 text-green-700 border-green-200" },
+                      {
+                        name: "React.js",
+                        color: "bg-blue-500/10 text-blue-700 border-blue-200",
+                      },
+                      {
+                        name: "Chakra UI",
+                        color: "bg-teal-500/10 text-teal-700 border-teal-200",
+                      },
+                      {
+                        name: "JavaScript",
+                        color:
+                          "bg-yellow-500/10 text-yellow-700 border-yellow-200",
+                      },
+                      {
+                        name: "Git",
+                        color:
+                          "bg-orange-500/10 text-orange-700 border-orange-200",
+                      },
+                      {
+                        name: "Team Collaboration",
+                        color:
+                          "bg-purple-500/10 text-purple-700 border-purple-200",
+                      },
+                      {
+                        name: "Agile",
+                        color:
+                          "bg-green-500/10 text-green-700 border-green-200",
+                      },
                     ].map((tech, index) => (
                       <Badge
                         key={tech.name}
@@ -153,8 +203,8 @@ export function Experience() {
                   <h3 className="text-lg font-bold">Looking Forward</h3>
                 </div>
                 <p className="text-muted-foreground text-sm text-pretty leading-relaxed mb-4">
-                  Actively seeking new opportunities to apply my skills in full-stack development and contribute to
-                  innovative projects.
+                  Actively seeking new opportunities to apply my skills in
+                  full-stack development and contribute to innovative projects.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
@@ -227,15 +277,27 @@ export function Experience() {
                 <div className="space-y-3 text-sm">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                    <span className="text-muted-foreground">Jun 2024: Started internship</span>
+                    <span className="text-muted-foreground">
+                      Jun 2025: Started internship
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                    <span className="text-muted-foreground">July 2024: First project delivery</span>
+                    <span className="text-muted-foreground">
+                      July 2025: First project delivery
+                    </span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
-                    <span className="text-muted-foreground">Sep 2024: Completed internship</span>
+                    <span className="text-muted-foreground">
+                      Sep 2025: Completed internship
+                    </span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-accent rounded-full"></div>
+                    <span className="text-muted-foreground">
+                      Sep 2025: Completed internship
+                    </span>
                   </div>
                 </div>
               </CardContent>
@@ -244,5 +306,5 @@ export function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }
