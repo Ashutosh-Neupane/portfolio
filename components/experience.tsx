@@ -34,7 +34,7 @@ export function Experience() {
                       <Building className="h-8 w-8 text-primary" />
                     </div>
                     <div>
-                      <CardTitle className="text-2xl mb-2">Web Developer Intern</CardTitle>
+                      <CardTitle className="text-2xl mb-2">Web Developer Intern -Junior </CardTitle>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Building className="h-4 w-4" />
                         <span className="font-semibold text-primary">Dots and Dashes Technology Limited</span>
@@ -44,7 +44,7 @@ export function Experience() {
                   <div className="flex flex-col gap-3">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground bg-muted/50 px-3 py-2 rounded-lg">
                       <Calendar className="h-4 w-4" />
-                      <span>June 2024 – Sep 2024</span>
+                      <span>June 2024 – present</span>
                     </div>
                     <Badge variant="secondary" className="w-fit bg-primary/10 text-primary hover:bg-primary/20">
                       3 Months

@@ -1,4 +1,3 @@
-
 "use client";
 
 import type React from "react";
@@ -8,6 +7,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { toast } from "@/hooks/use-toast";
+
 import {
   Mail,
   Phone,
@@ -41,10 +42,13 @@ export function Contact() {
       });
       const data = await res.json();
       if (res.ok) {
-        alert("Message sent successfully!");
+        toast({
+          title: "Message sent successfully!",
+        });
+
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        alert(data.error || "Something went wrong");
+        toast({ title: data.error || "Something went wrong" });
       }
     } catch (err) {
       console.error(err);
@@ -246,7 +250,7 @@ export function Contact() {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="John Doe"
+                        placeholder="Ashutosh"
                         className="h-14 border-2 focus:border-primary/50 transition-all duration-300 bg-background/50 text-base"
                         required
                       />
@@ -264,7 +268,7 @@ export function Contact() {
                         type="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="john@example.com"
+                        placeholder="ashutosh@example.com"
                         className="h-14 border-2 focus:border-primary/50 transition-all duration-300 bg-background/50 text-base"
                         required
                       />
@@ -344,54 +348,61 @@ export function Contact() {
           </div>
         </div>
       </div>
-        <div className="mt-20">
-          <Card
-            className="max-w-5xl mx-auto hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-slide-up bg-gradient-to-br from-secondary/5 via-background to-accent/5 border-0 shadow-xl relative overflow-hidden"
-            style={{ animationDelay: "0.6s" }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-3xl" />
+      <div className="mt-20">
+        <Card
+          className="max-w-5xl mx-auto hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 animate-slide-up bg-gradient-to-br from-secondary/5 via-background to-accent/5 border-0 shadow-xl relative overflow-hidden"
+          style={{ animationDelay: "0.6s" }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-3xl" />
 
-            <CardContent className="p-12 text-center relative z-10">
-              <div className="flex items-center justify-center gap-4 mb-8">
-                <div className="p-4 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-3xl shadow-lg">
-                  <CheckCircle className="h-10 w-10 text-green-500" />
-                </div>
-                <div>
-                  <h3 className="text-4xl font-bold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
-                    Available for New Projects
-                  </h3>
-                  <div className="h-1 w-32 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-2 mx-auto" />
-                </div>
+          <CardContent className="p-12 text-center relative z-10">
+            <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="p-4 bg-gradient-to-br from-green-500/10 to-emerald-500/10 rounded-3xl shadow-lg">
+                <CheckCircle className="h-10 w-10 text-green-500" />
               </div>
-
-              <p className="text-muted-foreground text-pretty text-xl leading-relaxed mb-10 max-w-3xl mx-auto">
-                I'm currently accepting new projects and exciting opportunities. Whether you need a full-stack
-                developer, frontend specialist, or technical consultant, let's discuss how we can work together.
-              </p>
-
-              <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <div className="flex items-center gap-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 px-6 py-3 rounded-full border border-green-500/20">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
-                  <span className="font-semibold text-green-700 dark:text-green-300">Available for Full-time</span>
-                </div>
-                <div className="flex items-center gap-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 px-6 py-3 rounded-full border border-blue-500/20">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"></div>
-                  <span className="font-semibold text-blue-700 dark:text-blue-300">Open to Freelance</span>
-                </div>
-                <div className="flex items-center gap-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 px-6 py-3 rounded-full border border-purple-500/20">
-                  <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"></div>
-                  <span className="font-semibold text-purple-700 dark:text-purple-300">Remote Friendly</span>
-                </div>
+              <div>
+                <h3 className="lg:text-4xl text-2xl  text-left font-bold bg-gradient-to-r from-green-500 to-emerald-500 bg-clip-text text-transparent">
+                  Available for New Projects
+                </h3>
+                <div className="h-1 w-32 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mt-2 mx-auto" />
               </div>
+            </div>
 
-              <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground">
-                <Heart className="h-5 w-5 text-red-500 animate-pulse" />
-                <span>Let's create something amazing together!</span>
+            <p className="text-muted-foreground text-pretty text-xl leading-relaxed mb-10 max-w-3xl mx-auto">
+              I'm currently accepting new projects and exciting opportunities.
+              Whether you need a full-stack developer, frontend specialist, or
+              technical consultant, let's discuss how we can work together.
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="flex items-center gap-3 bg-gradient-to-r from-green-500/10 to-emerald-500/10 px-6 py-3 rounded-full border border-green-500/20">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"></div>
+                <span className="font-semibold text-green-700 dark:text-green-300">
+                  Available for Full-time
+                </span>
               </div>
-            </CardContent>
-          </Card>
-        </div>
+              <div className="flex items-center gap-3 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 px-6 py-3 rounded-full border border-blue-500/20">
+                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse shadow-lg shadow-blue-500/50"></div>
+                <span className="font-semibold text-blue-700 dark:text-blue-300">
+                  Open to Freelance
+                </span>
+              </div>
+              <div className="flex items-center gap-3 bg-gradient-to-r from-purple-500/10 to-pink-500/10 px-6 py-3 rounded-full border border-purple-500/20">
+                <div className="w-3 h-3 bg-purple-500 rounded-full animate-pulse shadow-lg shadow-purple-500/50"></div>
+                <span className="font-semibold text-purple-700 dark:text-purple-300">
+                  Remote Friendly
+                </span>
+              </div>
+            </div>
+
+            <div className="flex items-center justify-center gap-2 text-lg text-muted-foreground">
+              <Heart className="h-5 w-5 text-red-500 animate-pulse" />
+              <span>Let's create something amazing together!</span>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </section>
   );
 }

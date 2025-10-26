@@ -365,12 +365,12 @@ export function Projects() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-accent/10 to-transparent rounded-full blur-3xl" />
 
             <CardContent className="p-12 text-center relative z-10">
-              <div className="flex items-center justify-center gap-4 mb-8">
+              <div className="flex items-center justify-center gap-6 md:gap-4 mb-8">
                 <div className="p-4 bg-gradient-to-br from-accent/10 to-primary/10 rounded-3xl shadow-lg">
                   <Calendar className="h-8 w-8 text-accent" />
                 </div>
                 <div>
-                  <h3 className="text-3xl font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+                  <h3 className="text-3xl text-left font-bold bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
                     More Projects Coming Soon
                   </h3>
                   <div className="h-1 w-24 bg-gradient-to-r from-accent to-primary rounded-full mt-2" />

@@ -104,7 +104,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-20 pt-8 border-t border-border/50">
+          <div className="grid  grid-cols-2 gap-8 mt-20 pt-8 border-t border-border/50">
             <div className="text-center group hover:scale-105 transition-transform animate-slide-in-left delay-1000">
               <div className="text-3xl font-bold text-primary group-hover:text-secondary transition-colors animate-shimmer">
                 8+

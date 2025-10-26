@@ -36,7 +36,7 @@ export function About() {
           {/* Main Story Section */}
           <div className="xl:col-span-2 space-y-8">
             <Card className="p-8 hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-slide-up group">
-              <div className="flex items-start gap-6">
+              <div className="flex md:flex-row flex-col items-start gap-6">
                 <div className="p-4 bg-primary/10 rounded-2xl group-hover:bg-primary/20 transition-colors duration-300">
                   <Code2 className="h-8 w-8 text-primary" />
                 </div>
