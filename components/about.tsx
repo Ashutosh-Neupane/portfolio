@@ -53,8 +53,7 @@ export function About() {
                   <p className="text-muted-foreground text-pretty leading-relaxed">
                     Since June 2025 I've been a software developer at Dots and
                     Dashes Technology Services, delivering e-commerce and business
-                    platforms for clients such as Sathi Mart and Bhugharbha. On my
-                    own I build software for Nepal: a grievance platform for
+                    platforms for client businesses. On my own I build software for Nepal: a grievance platform for
                     wards and Palikas, and a case management system for
                     financial-crime investigation.
                   </p>

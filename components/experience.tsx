@@ -72,8 +72,8 @@ export function Experience() {
                 <p className="text-muted-foreground text-pretty leading-relaxed text-lg">
                   I build production web applications end to end: Next.js and
                   React frontends, and Frappe backends with custom DocTypes and
-                  REST APIs, for e-commerce and inventory workflows. Clients
-                  include Sathi Mart and Bhugharbha.
+                  REST APIs, for e-commerce and inventory workflows at client
+                  businesses.
                 </p>
 
                 <div className="space-y-6">
