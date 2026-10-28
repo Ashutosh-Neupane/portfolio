@@ -1,7 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Github, Landmark, ShieldCheck } from "lucide-react";
+import { CheckCircle, Coffee, Github, Landmark, ShieldCheck } from "lucide-react";
 
 const featured = [
   {
@@ -42,6 +42,25 @@ const featured = [
     ],
     githubUrl: "https://github.com/Ashutosh-Neupane/nepal-case-management",
   },
+  {
+    title: "Crema",
+    tagline: "A modern desk for the Frappe framework",
+    icon: <Coffee className="h-6 w-6" />,
+    description:
+      "A Next.js replacement for Frappe Desk that runs against any Frappe v16 site, ERPNext included, with no per-app code. It reads the site's metadata and runs the site's own JavaScript, so ERPNext's form scripts, reports and workflows keep working.",
+    highlights: [
+      "Forms, child tables, lists, Kanban, calendar, Gantt, tree and report views, print and PDF",
+      "The real Frappe client-script runtime, including dialogs and real jQuery for page scripts",
+      "Field-level permissions, workflows, impersonation and server tracebacks",
+      "52 end-to-end suites checked against a live Frappe v16 + ERPNext site",
+    ],
+    technologies: ["Next.js 16", "React 19", "TypeScript", "Tailwind 4", "Frappe", "ERPNext", "Playwright"],
+    images: [
+      { src: "/projects/crema-form.jpg", alt: "Crema: ERPNext Sales Order form" },
+      { src: "/projects/crema-list.jpg", alt: "Crema: Sales Order list with filters" },
+    ],
+    githubUrl: "https://github.com/Ashutosh-Neupane/crema-desk",
+  },
 ];
 
 export function FeaturedProjects() {
@@ -51,13 +70,13 @@ export function FeaturedProjects() {
         <div className="text-center mb-16">
           <div className="inline-block animate-slide-up">
             <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              Built for Nepal
+              Open-source work
             </h2>
             <div className="h-1 w-32 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full animate-expand" />
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty mt-8 leading-relaxed">
-            Open-source software designed around how Nepal&apos;s public offices actually work: wards and Palikas,
-            the Bikram Sambat calendar, Nepali language, and the agencies cases are sent to.
+            Software for Nepal&apos;s public offices, built around wards and Palikas, the Bikram Sambat calendar and
+            Nepali language, and a modern desk for the Frappe framework.
           </p>
         </div>
 
