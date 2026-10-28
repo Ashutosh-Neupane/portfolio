@@ -58,7 +58,7 @@ export function Projects() {
         "Tailwind CSS",
       ],
       category: "Frontend Website",
-      githubUrl: "https://github.com/Ashutosh-Neupane?tab=repositories",
+      githubUrl: "https://github.com/Ashutosh-Neupane/darkthemeitcompanywebsite",
     },
     {
       title: "E-Commerce Platform",
@@ -89,8 +89,6 @@ export function Projects() {
       icon: <Globe className="h-6 w-6" />,
       technologies: ["React.js", "Chakra UI", "Responsive Design"],
       category: "Organization Website",
-      githubUrl: "https://github.com/yourusername/tara-nepal",
-      liveUrl: "https://tara-nepal.vercel.app",
     },
     {
       title: "Lungta Website",
@@ -99,8 +97,6 @@ export function Projects() {
       icon: <Globe className="h-6 w-6" />,
       technologies: ["React.js", "Next.js", "Modern UI", "Responsive Design"],
       category: "Business Website",
-      githubUrl: "https://github.com/yourusername/lungta-website",
-      liveUrl: "https://lungta-website.vercel.app",
     },
     {
       title: "Chadet Cosmetics",
@@ -109,8 +105,6 @@ export function Projects() {
       icon: <ShoppingCart className="h-6 w-6" />,
       technologies: ["Next.js", "Chakra UI", "Zustand", "React Query"],
       category: "E-commerce",
-      githubUrl: "https://github.com/yourusername/chadet-cosmetics",
-      liveUrl: "https://chadet-cosmetics.vercel.app",
     },
     {
       title: "Indu Groceries",
@@ -119,8 +113,6 @@ export function Projects() {
       icon: <Store className="h-6 w-6" />,
       technologies: ["React.js", "Node.js", "Express.js", "MongoDB"],
       category: "E-commerce",
-      githubUrl: "https://github.com/yourusername/indu-groceries",
-      liveUrl: "https://indu-groceries.vercel.app",
     },
     {
       title: "Hamaglobal Corporate Website",
