@@ -53,11 +53,12 @@ export function Hero() {
               </span>
             </h1>
             <p className="text-xl sm:text-2xl text-muted-foreground text-balance animate-slide-up delay-200">
-              Full-Stack Web Developer
+              Software Developer · Next.js · Frappe / ERPNext
             </p>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty animate-slide-up delay-400">
-              Final-year Computer Science student passionate about building responsive, user-friendly, and scalable web
-              applications using the MERN stack and modern frameworks like Next.js.
+              CSIT graduate and software developer at Dots and Dashes Technology Services. I build Next.js frontends,
+              Frappe and Node.js backends, and software made for Nepal: grievance systems, financial-crime case
+              management and e-commerce.
             </p>
           </div>
 
@@ -97,7 +98,7 @@ export function Hero() {
                 asChild
                 className="hover:scale-110 transition-transform bg-transparent animate-slide-in-left delay-900"
               >
-                <a href="mailto:neupaneashutosh68@gmail.com">
+                <a href="mailto:ashutoshneupane495@gmail.com">
                   <Mail className="h-5 w-5" />
                 </a>
               </Button>
@@ -107,15 +108,15 @@ export function Hero() {
           <div className="grid  grid-cols-2 gap-8 mt-20 pt-8 border-t border-border/50">
             <div className="text-center group hover:scale-105 transition-transform animate-slide-in-left delay-1000">
               <div className="text-3xl font-bold text-primary group-hover:text-secondary transition-colors animate-shimmer">
-                8+
+                15+
               </div>
-              <div className="text-muted-foreground">Projects Completed</div>
+              <div className="text-muted-foreground">Projects Built</div>
             </div>
             <div className="text-center group hover:scale-105 transition-transform animate-slide-in-right delay-1200">
               <div className="text-3xl font-bold text-primary group-hover:text-secondary transition-colors animate-shimmer">
-                5+
+                1+ yr
               </div>
-              <div className="text-muted-foreground">Technologies Mastered</div>
+              <div className="text-muted-foreground">Professional Experience</div>
             </div>
           </div>
         </div>

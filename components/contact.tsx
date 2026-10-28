@@ -69,8 +69,8 @@ export function Contact() {
     {
       icon: <Mail className="h-5 w-5 text-blue-500" />,
       label: "Email",
-      value: "neupaneashutosh68@gmail.com",
-      href: "mailto:neupaneashutosh68@gmail.com",
+      value: "ashutoshneupane495@gmail.com",
+      href: "mailto:ashutoshneupane495@gmail.com",
       bgColor: "bg-blue-500/10",
     },
     {

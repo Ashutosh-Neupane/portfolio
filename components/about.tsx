@@ -45,18 +45,18 @@ export function About() {
                     My Journey
                   </h3>
                   <p className="text-muted-foreground text-pretty leading-relaxed mb-4">
-                    I'm a final-year Computer Science and IT student at
-                    Tribhuvan University, currently in my 8th semester. My
-                    passion for web development began during my academic
-                    journey, where I discovered the power of creating digital
-                    solutions that combine clean design with robust
-                    functionality.
+                    I'm a B.Sc. CSIT graduate from Amrit Science Campus
+                    (Tribhuvan University). I started with web development during
+                    my studies and now work across the stack: Next.js and React
+                    on the front, Frappe / ERPNext, Node.js and Python behind it.
                   </p>
                   <p className="text-muted-foreground text-pretty leading-relaxed">
-                    Through my internship at Dots and Dashes Technology Limited
-                    and various personal projects, I've gained hands-on
-                    experience in building scalable web applications using
-                    modern technologies.
+                    Since June 2025 I've been a software developer at Dots and
+                    Dashes Technology Services, delivering e-commerce and business
+                    platforms for clients such as Sathi Mart and Bhugharbha. On my
+                    own I build software for Nepal: a grievance platform for
+                    wards and Palikas, and a case management system for
+                    financial-crime investigation.
                   </p>
                 </div>
               </div>
@@ -123,13 +123,13 @@ export function About() {
                 <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors group">
                   <Mail className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium">
-                    neupaneashutosh68@gmail.com
+                    ashutoshneupane495@gmail.com
                   </span>
                 </div>
                 <div className="flex items-center gap-3 p-3 rounded-lg hover:bg-muted/50 transition-colors group">
                   <GraduationCap className="h-5 w-5 text-primary group-hover:scale-110 transition-transform" />
                   <span className="text-sm font-medium">
-                    B.Sc. CSIT (8th Semester)
+                    B.Sc. CSIT graduate
                   </span>
                 </div>
               </div>
@@ -154,7 +154,7 @@ export function About() {
                       Amrit Science Campus, TU
                     </p>
                     <p className="text-xs text-primary font-medium">
-                      2078 – Present
+                      Graduated
                     </p>
                   </div>
                 </div>
