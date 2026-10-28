@@ -46,12 +46,12 @@ export function Experience() {
                     </div>
                     <div>
                       <CardTitle className="text-2xl mb-2">
-                        Web Developer Intern -Junior{" "}
+                        Software Developer, React Department
                       </CardTitle>
                       <div className="flex items-center gap-2 text-muted-foreground">
                         <Building className="h-4 w-4" />
                         <span className="font-semibold text-primary">
-                          Dots and Dashes Technology Limited
+                          Dots and Dashes Technology Services Pvt. Ltd.
                         </span>
                       </div>
                     </div>
@@ -70,10 +70,10 @@ export function Experience() {
 
               <CardContent className="space-y-8">
                 <p className="text-muted-foreground text-pretty leading-relaxed text-lg">
-                  Gained valuable hands-on experience in professional web
-                  development, working collaboratively in a team environment to
-                  deliver high-quality web applications using modern
-                  technologies.
+                  I build production web applications end to end: Next.js and
+                  React frontends, and Frappe backends with custom DocTypes and
+                  REST APIs, for e-commerce and inventory workflows. Clients
+                  include Sathi Mart and Bhugharbha.
                 </p>
 
                 <div className="space-y-6">
@@ -91,8 +91,8 @@ export function Experience() {
                           Frontend Development
                         </h5>
                         <p className="text-xs text-muted-foreground">
-                          Built responsive components using React.js and Chakra
-                          UI
+                          Production Next.js and React apps with reusable
+                          components and accessible Chakra UI designs
                         </p>
                       </div>
                     </div>
@@ -102,10 +102,11 @@ export function Experience() {
                       </div>
                       <div>
                         <h5 className="font-semibold text-sm mb-1">
-                          Team Collaboration
+                          Frappe Backends
                         </h5>
                         <p className="text-xs text-muted-foreground">
-                          Worked effectively in agile development environment
+                          Custom DocTypes, business logic and REST APIs for
+                          e-commerce and inventory
                         </p>
                       </div>
                     </div>
@@ -115,10 +116,11 @@ export function Experience() {
                       </div>
                       <div>
                         <h5 className="font-semibold text-sm mb-1">
-                          Project Workflows
+                          End-to-end Integration
                         </h5>
                         <p className="text-xs text-muted-foreground">
-                          Mastered Git collaboration and version control
+                          Next.js frontends connected to Frappe: authentication,
+                          validation and API calls
                         </p>
                       </div>
                     </div>
@@ -128,10 +130,11 @@ export function Experience() {
                       </div>
                       <div>
                         <h5 className="font-semibold text-sm mb-1">
-                          Professional Standards
+                          Performance
                         </h5>
                         <p className="text-xs text-muted-foreground">
-                          Learned industry best practices and coding standards
+                          State and data fetching with Zustand and React Query,
+                          faster page loads, cross-browser fixes
                         </p>
                       </div>
                     </div>
@@ -154,7 +157,23 @@ export function Experience() {
                         color: "bg-teal-500/10 text-teal-700 border-teal-200",
                       },
                       {
-                        name: "JavaScript",
+                        name: "Next.js",
+                        color: "bg-zinc-500/10 text-zinc-700 border-zinc-200",
+                      },
+                      {
+                        name: "TypeScript",
+                        color: "bg-sky-500/10 text-sky-700 border-sky-200",
+                      },
+                      {
+                        name: "Frappe / ERPNext",
+                        color: "bg-indigo-500/10 text-indigo-700 border-indigo-200",
+                      },
+                      {
+                        name: "React Query",
+                        color: "bg-rose-500/10 text-rose-700 border-rose-200",
+                      },
+                      {
+                        name: "Zustand",
                         color:
                           "bg-yellow-500/10 text-yellow-700 border-yellow-200",
                       },
@@ -162,11 +181,6 @@ export function Experience() {
                         name: "Git",
                         color:
                           "bg-orange-500/10 text-orange-700 border-orange-200",
-                      },
-                      {
-                        name: "Team Collaboration",
-                        color:
-                          "bg-purple-500/10 text-purple-700 border-purple-200",
                       },
                       {
                         name: "Agile",
@@ -203,21 +217,21 @@ export function Experience() {
                   <h3 className="text-lg font-bold">Looking Forward</h3>
                 </div>
                 <p className="text-muted-foreground text-sm text-pretty leading-relaxed mb-4">
-                  Actively seeking new opportunities to apply my skills in
-                  full-stack development and contribute to innovative projects.
+                  Open to full-stack and Frappe / ERPNext work, and to
+                  collaborating on software for Nepal.
                 </p>
                 <div className="space-y-2">
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
-                    <span>Junior Developer Positions</span>
+                    <span>Full-stack roles</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <div className="w-1.5 h-1.5 bg-secondary rounded-full"></div>
-                    <span>Internship Opportunities</span>
+                    <span>Frappe / ERPNext projects</span>
                   </div>
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                    <span>Freelance Projects</span>
+                    <span>Public-sector software for Nepal</span>
                   </div>
                 </div>
               </CardContent>
@@ -296,7 +310,7 @@ export function Experience() {
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-accent rounded-full"></div>
                     <span className="text-muted-foreground">
-                      Sep 2025: Started junior postion
+                      Sep 2025: Started as software developer
                     </span>
                   </div>
                 </div>

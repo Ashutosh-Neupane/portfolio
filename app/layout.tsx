@@ -8,9 +8,9 @@ import { Toaster } from '@/components/ui/toaster'
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Ashutosh Neupane - Full Stack Developer",
+  title: "Ashutosh Neupane - Software Developer",
   description:
-    "Portfolio of Ashutosh Neupane, a passionate full-stack web developer specializing in React, Next.js, and the MERN stack.",
+    "Ashutosh Neupane, software developer in Kathmandu. Next.js and React frontends with Frappe / ERPNext, Node.js and Python backends, and software built for Nepal.",
 };
 
 export default function RootLayout({

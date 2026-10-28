@@ -138,7 +138,7 @@ export function Projects() {
     {
       title: "Shiva Shakti POS Module",
       description:
-        "Built a Point of Sale (POS) module during internship. Worked with React and API integrations for retail functionality and inventory management.",
+        "Built a Point of Sale (POS) module. Worked with React and API integrations for retail functionality and inventory management.",
       icon: <Briefcase className="h-6 w-6" />,
       technologies: [
         "React.js",
@@ -277,8 +277,8 @@ export function Projects() {
           </div>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto text-pretty mt-8 animate-fade-in-delayed leading-relaxed">
             A curated showcase of my development journey, featuring both
-            personal innovations and professional contributions at Dots and
-            Dashes Technology Limited.
+            software built for Nepal, personal projects and professional work at
+            Dots and Dashes Technology Services.
           </p>
         </div>
 
@@ -294,7 +294,7 @@ export function Projects() {
               <div>
                 <h3 className="text-3xl font-bold">Professional Experience</h3>
                 <p className="text-muted-foreground text-sm">
-                  Work at Dots and Dashes Technology Limited
+                  Work at Dots and Dashes Technology Services
                 </p>
               </div>
             </div>
@@ -304,7 +304,7 @@ export function Projects() {
                 className="bg-secondary/10 text-secondary border-secondary/20 px-4 py-2 font-semibold"
               >
                 <Building className="h-4 w-4 mr-2" />
-                Internship
+                Client work
               </Badge>
             </div>
           </div>
