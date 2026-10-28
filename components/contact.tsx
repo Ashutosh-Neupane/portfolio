@@ -52,7 +52,7 @@ export function Contact() {
       }
     } catch (err) {
       console.error(err);
-      alert("Failed to send message");
+      toast({ title: "Failed to send message" });
     }
   };
 
